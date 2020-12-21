@@ -20,6 +20,12 @@ public class NodoDoble {
         prev = null;
     }
     
+    public NodoDoble(int dato){
+        this.dato = dato;
+        next = null;
+        prev = null;
+    }
+    
     public int getDato(){return dato;}
     public NodoDoble getNext(){return next;}
     public NodoDoble getPrev(){return prev;}

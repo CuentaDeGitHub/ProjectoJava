@@ -86,6 +86,11 @@ public class MenuEstructuras extends javax.swing.JFrame {
         });
 
         btnArbol.setText("Arbol");
+        btnArbol.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnArbolActionPerformed(evt);
+            }
+        });
 
         btnGrafo.setText("Grafo");
 
@@ -180,6 +185,10 @@ public class MenuEstructuras extends javax.swing.JFrame {
     private void btnListaCircDobleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListaCircDobleActionPerformed
         new FormularioListaCircularDoble().setVisible(true);
     }//GEN-LAST:event_btnListaCircDobleActionPerformed
+
+    private void btnArbolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArbolActionPerformed
+        new FormularioArbol().setVisible(true);
+    }//GEN-LAST:event_btnArbolActionPerformed
 
     /**
      * @param args the command line arguments
