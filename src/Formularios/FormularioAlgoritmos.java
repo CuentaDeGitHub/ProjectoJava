@@ -28,15 +28,25 @@ public class FormularioAlgoritmos extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        btnInsertion1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         btnBurbuja = new javax.swing.JButton();
         btnCounting = new javax.swing.JButton();
         btnCockTail = new javax.swing.JButton();
         btnShell = new javax.swing.JButton();
         btnRadiz = new javax.swing.JButton();
+        btnInsertion = new javax.swing.JButton();
+        btnRegresar = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setText("Seleccione la estrctura de datos");
+
+        btnInsertion1.setText("Insertion");
+        btnInsertion1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInsertion1ActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,6 +88,20 @@ public class FormularioAlgoritmos extends javax.swing.JFrame {
             }
         });
 
+        btnInsertion.setText("Insertion");
+        btnInsertion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInsertionActionPerformed(evt);
+            }
+        });
+
+        btnRegresar.setText("Regresar");
+        btnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -86,7 +110,8 @@ public class FormularioAlgoritmos extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel2))
+                        .addComponent(jLabel2)
+                        .addGap(0, 1, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(85, 85, 85)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -94,25 +119,36 @@ public class FormularioAlgoritmos extends javax.swing.JFrame {
                             .addComponent(btnCounting, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
                             .addComponent(btnCockTail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnShell, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnRadiz, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(btnRadiz, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnInsertion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnRegresar)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnBurbuja)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnCounting)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnCockTail)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnShell)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnRadiz)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnBurbuja)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnCounting)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnCockTail)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnShell)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnRadiz)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnInsertion)
+                        .addContainerGap(30, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnRegresar)
+                        .addContainerGap())))
         );
 
         pack();
@@ -137,6 +173,18 @@ public class FormularioAlgoritmos extends javax.swing.JFrame {
     private void btnRadizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRadizActionPerformed
         new FormularioRadix().setVisible(true);
     }//GEN-LAST:event_btnRadizActionPerformed
+
+    private void btnInsertionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertionActionPerformed
+        new FormularioInsertion().setVisible(true);
+    }//GEN-LAST:event_btnInsertionActionPerformed
+
+    private void btnInsertion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertion1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnInsertion1ActionPerformed
+
+    private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnRegresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,7 +225,10 @@ public class FormularioAlgoritmos extends javax.swing.JFrame {
     private javax.swing.JButton btnBurbuja;
     private javax.swing.JButton btnCockTail;
     private javax.swing.JButton btnCounting;
+    private javax.swing.JButton btnInsertion;
+    private javax.swing.JButton btnInsertion1;
     private javax.swing.JButton btnRadiz;
+    private javax.swing.JButton btnRegresar;
     private javax.swing.JButton btnShell;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
