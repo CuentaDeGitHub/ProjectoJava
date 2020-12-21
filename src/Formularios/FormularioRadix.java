@@ -34,19 +34,15 @@ int maximo;
     private void initComponents() {
 
         txtTamaño = new javax.swing.JTextField();
-        lblComparaciones = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        lblIntercambios = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         lblTiempo = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         btnRegreso = new javax.swing.JButton();
         btnArreglo = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         btnArregloAleatorio = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         txtMinimo = new javax.swing.JTextField();
         lblArregloOriginal = new javax.swing.JLabel();
@@ -55,11 +51,7 @@ int maximo;
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblComparaciones.setText("Comparaciones");
-
         jLabel1.setText("Tamaño");
-
-        lblIntercambios.setText("Intercambios");
 
         jLabel2.setText("Minimo");
 
@@ -83,8 +75,6 @@ int maximo;
 
         jLabel5.setText("Arreglo orignal");
 
-        jLabel8.setText("Intercambios");
-
         jLabel6.setText("Arreglo ordenado");
 
         btnArregloAleatorio.setText("Crear arreglo aleatorio");
@@ -93,8 +83,6 @@ int maximo;
                 btnArregloAleatorioActionPerformed(evt);
             }
         });
-
-        jLabel7.setText("Comparaciones");
 
         jLabel10.setText("Tiempo");
 
@@ -128,22 +116,15 @@ int maximo;
                                             .addComponent(txtMaximo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addComponent(btnArreglo))
                                 .addGap(54, 54, 54)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel7)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(12, 12, 12)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel10)
-                                                .addComponent(jLabel8)))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel6)
+                                        .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING))
+                                    .addComponent(jLabel10))
                                 .addGap(37, 37, 37)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblArregloOriginal)
                                     .addComponent(lblArregloOrdenado)
-                                    .addComponent(lblComparaciones)
-                                    .addComponent(lblIntercambios)
                                     .addComponent(lblTiempo)))
                             .addComponent(btnArregloAleatorio))
                         .addContainerGap(270, Short.MAX_VALUE))))
@@ -167,22 +148,12 @@ int maximo;
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtMaximo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(jLabel7)
-                    .addComponent(lblComparaciones))
+                    .addComponent(jLabel10)
+                    .addComponent(lblTiempo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnArreglo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnArregloAleatorio))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
-                            .addComponent(lblIntercambios))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel10)
-                            .addComponent(lblTiempo))))
+                .addComponent(btnArreglo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnArregloAleatorio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnRegreso, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -339,12 +310,8 @@ int maximo;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel lblArregloOrdenado;
     private javax.swing.JLabel lblArregloOriginal;
-    private javax.swing.JLabel lblComparaciones;
-    private javax.swing.JLabel lblIntercambios;
     private javax.swing.JLabel lblTiempo;
     private javax.swing.JTextField txtMaximo;
     private javax.swing.JTextField txtMinimo;
